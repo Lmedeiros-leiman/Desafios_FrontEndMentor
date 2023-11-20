@@ -1,0 +1,187 @@
+.attribution {
+    position: fixed;
+
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@font-face {
+    font-family: "Hanken grotesk";
+    src: url("fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+:root {
+    /* Solid Colors */
+    --light-red: hsla(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Transparent Colors */
+
+    --light-red-transparent: hsla(0, 100%, 67%, 0.125);
+    --Orangey-yellow-transparent: hsl(39, 100%, 56%, 0.125);
+    --Green-teal-transparent: hsl(166, 100%, 37%, 0.125);
+    --Cobalt-blue-transparent: hsl(234, 85%, 45%, 0.125);
+
+    /* Gradient Colors */
+
+    /* background */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    /* background */
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    /* circle */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    /* circle */
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    /* Neutral Colors */
+
+    /* the color white */
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    box-sizing: border-box;
+    position: relative;
+
+
+}
+
+/*
+The designs were created to the following widths:
+Mobile: 375px
+Desktop: 1440px
+
+
+*/
+
+body {
+    max-width: 1440px;
+    width: 100vw;
+    height: 100vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Hanken grotesk";
+    font-size: 18px;
+
+    background-color: var(--Pale-blue);
+
+}
+
+#body {
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    gap: 2rem;
+
+
+}
+
+button {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    color: white;
+    border-radius: 9999px;
+    padding: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 1rem;
+    margin: 0.25rem;
+    font-weight: 900;
+    font-size: 1.30rem;
+    cursor: pointer;
+    overflow: hidden;
+
+    background-color: var(--Dark-gray-blue);
+}
+
+button::before {
+    content: "Continue";
+    position: absolute;
+    top: 0;
+    left: -14px;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 1rem;
+
+
+    text-align: center;
+
+    background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+button:focus::before {
+    opacity: 0;
+}
+
+button:focus {
+    background-color: var(--Violet-blue);
+}
+
+@media screen and (max-width: calc(376px + 376px)) {
+
+    #body {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        padding-bottom: 2rem;
+    }
+
+    #body>* {
+        width: 100% !important;
+        max-width: 100%;
+
+    }
+
+    .result {
+        padding-top: 20rem;
+        padding-bottom: 4rem;
+    }
+
+    .summary {
+        padding-right: 2rem !important;
+    }
+
+    .summary>* {
+        padding: 0;
+        margin: 0;
+
+
+    }
+
+
+}
