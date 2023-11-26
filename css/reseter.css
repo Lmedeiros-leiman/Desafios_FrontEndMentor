@@ -11,8 +11,8 @@
 
 body {
     font-size: 14px;
-    height: 100vh;
     background-color: var(--cream);
+    min-height: 100vh;
 
     display: flex;
     align-items: center;
@@ -21,6 +21,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 
+    overflow-x: hidden;
+
+    padding-block: 3rem;
 }
 
 .body {
@@ -37,6 +40,8 @@ body {
 
     text-align: left;
 
+
+
 }
 
 .body>*,
@@ -50,10 +55,11 @@ body {
     word-wrap: break-word;
 
 
+
 }
 
 picture {
-    height: auto;
+
     border-radius: inherit;
 
     display: flex;
@@ -62,14 +68,38 @@ picture {
 }
 
 img {
-    width: 100%;
-    height: 100%;
+
+
     border-radius: inherit;
 
-    object-fit: cover;
+
 }
 
 
+button {
+    background-color: var(--dark-cyan);
+    color: var(--cream);
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border-radius: 6px;
+    padding-block: 1rem;
+
+    transition: all .3s ease-in-out;
+
+}
+
+button:hover {
+    background-color: var(--darker-cyan);
+}
+
+button:focus {
+    background-color: var(--even-darker-cyan);
+}
 
 @media screen and (min-width: 800px) {
     .body {
