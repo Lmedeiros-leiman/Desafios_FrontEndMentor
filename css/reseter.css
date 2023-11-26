@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+body {
+    font-size: 14px;
+    height: 100vh;
+    background-color: var(--cream);
+}
+
+.body,
+#body {
+    width: 100vw;
+    height: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 1440px;
+
+}
+
+.body>*,
+#body>* {
+    width: 375px;
+    max-width: 375px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ja vem incluso com o projeto. */
+.attribution {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* */
